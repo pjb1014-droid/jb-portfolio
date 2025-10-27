@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <h1><a href="#">Home</a></h1>
+        <ul class="gnb">
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="main">
+      <section id="hero" class="hero">
+        <!-- 레이어 1: 첫 화면 -->
+        <div class="layer layer-home">
+          <div class="inner">
+            <div class="home-text">
+              <div class="text-left">
+                <h2>UI/UX</h2>
+                <h3>Portfolio</h3>
+                <p>
+                  A digital exhibition exploring interaction, rhythm, and
+                  emotion.
+                </p>
+              </div>
+              <div class="text-right">
+                <p>
+                  사람과 기술 사이,<br />
+                  <strong>감각적이고 자연스러운 경험</strong><br />
+                  을 빚어냅니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 레이어 2: 서문(처음엔 숨김) -->
+        <div class="layer layer-intro">
+          <div class="inner">
+            <div class="intro-text">
+              <h3>
+                이곳은 제가 만든 디자인이 머무는 공간입니다.<br />
+                하나의 프로젝트는 하나의 작품처럼,<br />
+                그 안에 담긴 리듬과 감정을 차분히 전시합니다.
+              </h3>
+              <h4>
+                화려함보다는 여백에 집중하고,<br />
+                기능보다 경험에 귀 기울입니다.
+              </h4>
+              <h5>
+                보는 이가 잠시 멈추어,<br />
+                디자인 속의 감정과 의도를 ‘감상’할 수 있기를 바랍니다.
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 가이드 -->
+        <div class="scroll-next">
+          <a href="#">Continue to the Artist’s Note ↓</a>
+        </div>
+      </section>
+
+      <section class="about-me">
+        <div class="inner">
+          <h2>ARTIST’S NOTE</h2>
+          <div class="about-wrap">
+            <!-- 왼쪽 영역 -->
+            <div class="profile-left">
+              <figure><img src="./img/about-me.png" alt="about-me" /></figure>
+              <div class="text">
+                <h3>박재범 <span>Park Jae Beom</span></h3>
+                <h4>
+                  사용자의 여정을 이해하고,<br />
+                  감각적이고 직관적인 경험을 설계합니다.
+                </h4>
+                <h5>
+                  화면 속 인터랙션과 여백을 통해<br />
+                  감정이 머무는 순간을 디자인합니다.
+                </h5>
+              </div>
+            </div>
+
+            <!-- 오른쪽 영역 -->
+            <div class="profile-right">
+              <ul class="info">
+                <li><strong>Birth.</strong> 1998.10.14</li>
+                <li><strong>Tel.</strong> 010-6514-5227</li>
+                <li><strong>Mail.</strong> qkr981014@naver.com</li>
+              </ul>
+
+              <!-- Education -->
+              <dl class="education">
+                <dt>Education</dt>
+                <dd>
+                  <ul>
+                    <li>
+                      <time>2025.07 - 2025.11</time>
+                      UI/UX 웹디자인&웹퍼블리셔 양성과정 수료
+                    </li>
+                    <li>
+                      <time>2024.07</time>
+                      제주대학교 토목공학과 졸업
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <!-- Certificate -->
+              <dl class="certificate">
+                <dt>Certificate</dt>
+                <dd>
+                  <ul>
+                    <li>컴퓨터활용능력 1급</li>
+                    <li>자동차운전면허 1종 대형</li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl class="material">
+                <dt>Material</dt>
+                <dd>
+                  <ul>
+                    <li><img src="" alt="Photoshop" /></li>
+                    <li><img src="" alt="Illustrator" /></li>
+                    <li><img src="" alt="Figma" /></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works">
+        <div class="inner">
+          <div class="works-wrap">
+            <div class="works-info">
+              <h2>SHACKSHACKBURGER</h2>
+              <h3>Website Redesign</h3>
+
+              <dl class="meta">
+                <div>
+                  <dt>Information</dt>
+                  <dd>
+                    <p>
+                      단순한 구조 속에서도 브랜드의 맛과 감성을 시각적으로
+                      체험할 수 있도록 설계했습니다.
+                    </p>
+                    <p>
+                      Pretendard Variable 폰트와 #FFFFFF, #6DB33E, #000000 컬러
+                      시스템은 쉑쉑버거가 지닌 신선함과 자신감을 담아냅니다.
+                    </p>
+                    <p>
+                      간결한 리듬 속에 에너지가 경쾌하게 흐르며, 사용자는 ‘보는
+                      것만으로도’ 브랜드의 맛을 느낄 수 있습니다.
+                    </p>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- 오른쪽 이미지 -->
+            <figure class="works-shot">
+              <img
+                src="./img/shack-mock.png"
+                alt="쉑쉑버거 웹사이트 리디자인 목업"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+  </body>
+</html>
