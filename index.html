@@ -11,22 +11,34 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script src="./js/index.js"></script>
+
+    <!-- 화면 스크롤 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./js/index2.js"></script>
   </head>
   <body>
     <header id="header">
       <nav>
         <h1><a href="#">Home</a></h1>
         <ul class="gnb">
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#sec2" class="nav-link">About Me</a></li>
+          <li><a href="#sec3" class="nav-link">Works</a></li>
+          <li><a href="#sec5" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main" class="main">
-      <section id="hero" class="hero">
+      <section id="sec1" class="hero">
         <!-- 레이어 1: 첫 화면 -->
         <div class="layer layer-home">
           <div class="inner">
@@ -73,11 +85,11 @@
 
         <!-- 하단 가이드 -->
         <div class="scroll-next">
-          <a href="#">Continue to the Artist’s Note ↓</a>
+          <a href="#sec2">Continue to the Artist’s Note ↓</a>
         </div>
       </section>
 
-      <section class="about-me">
+      <section id="sec2" class="about-me">
         <div class="inner">
           <h2>ARTIST’S NOTE</h2>
           <div class="about-wrap">
@@ -148,7 +160,7 @@
         </div>
       </section>
 
-      <section class="works">
+      <section id="sec3" class="works">
         <div class="inner">
           <div class="works-wrap">
             <div class="works-info">
@@ -156,33 +168,134 @@
               <h3>Website Redesign</h3>
 
               <dl class="meta">
-                <div>
-                  <dt>Information</dt>
-                  <dd>
-                    <p>
-                      단순한 구조 속에서도 브랜드의 맛과 감성을 시각적으로
-                      체험할 수 있도록 설계했습니다.
-                    </p>
-                    <p>
-                      Pretendard Variable 폰트와 #FFFFFF, #6DB33E, #000000 컬러
-                      시스템은 쉑쉑버거가 지닌 신선함과 자신감을 담아냅니다.
-                    </p>
-                    <p>
-                      간결한 리듬 속에 에너지가 경쾌하게 흐르며, 사용자는 ‘보는
-                      것만으로도’ 브랜드의 맛을 느낄 수 있습니다.
-                    </p>
-                  </dd>
-                </div>
+                <dt>Information</dt>
+                <dd>
+                  <p>
+                    단순한 구조 속에서도<br />브랜드의 맛과 감성을 시각적으로
+                    체험할 수 있도록 설계했습니다.
+                  </p>
+                  <p>
+                    Pretendard Variable 폰트와<br />
+                    #FFFFFF, #6DB33E, #000000 컬러 시스템은<br />
+                    쉑쉑버거가 지닌 신선함과 자신감을 담아냅니다.
+                  </p>
+                  <p>
+                    간결한 리듬 속에<br />
+                    에너지가 경쾌하게 흐르며,<br />
+                    사용자는 ‘보는 것만으로도’ 브랜드의 맛을 느낄 수 있습니다.
+                  </p>
+                </dd>
               </dl>
             </div>
 
             <!-- 오른쪽 이미지 -->
             <figure class="works-shot">
               <img
-                src="./img/shack-mock.png"
+                src="./img/wokrs1.png"
                 alt="쉑쉑버거 웹사이트 리디자인 목업"
               />
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec4" class="works-banner">
+        <div class="inner">
+          <!-- 킥커(짧은 설명) -->
+          <div class="worksss">
+            <div class="title">
+              <p class="kicker">
+                노출 환경과 목적에 따라<br />
+                <strong>시각적 우선순위와 레이아웃</strong>을 재구성했습니다.<br />
+                단순하지만 <strong>명확한 전달</strong>을 위한 흐름을
+                설계했습니다.
+              </p>
+              <div class="title-info">
+                <h2>Designed for Banner Design</h2>
+                <h3>Landscape Banner & Square Banner</h3>
+              </div>
+            </div>
+
+            <figure class="mock-col">
+              <div class="swiper hero-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" data-caption="배너 디자인 01">
+                    <img src="./img/banner가로1.png" alt="가로 01" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 02">
+                    <img src="./img/banner가로2.png" alt="가로 02" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 03">
+                    <img src="./img/banner가로3.png" alt="가로 03" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 04">
+                    <img src="./img/banner가로4.png" alt="가로 04" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 05">
+                    <img src="./img/banner가로5.png" alt="가로 05" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 06">
+                    <img src="./img/banner가로6.png" alt="가로 06" />
+                  </div>
+                  <div class="swiper-slide" data-caption="배너 디자인 07">
+                    <img src="./img/banner가로7.png" alt="가로 07" />
+                  </div>
+                </div>
+              </div>
+              <!-- 히어로 슬라이더 아래 번호/캡션 -->
+              <div class="hero-meta">
+                <span class="hero-num">/ 01</span>
+                <span class="hero-cap">배너 디자인 01</span>
+              </div>
+            </figure>
+          </div>
+
+          <!-- 하단 갤러리(썸네일) — 섹션 어디에 두어도 연동됨 -->
+          <div class="swiper thumbs-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 01</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로1.png" alt="세로 01" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 02</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로2.png" alt="세로 02" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 03</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로3.png" alt="세로 03" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 04</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로4.png" alt="세로 04" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 05</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로5.png" alt="세로 05" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 06</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로6.png" alt="세로 06" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <span class="thumb-num">/ 07</span>
+                <div class="thumb-frame">
+                  <img src="./img/banner세로7.png" alt="세로 07" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -176,9 +176,13 @@ header nav h1 {
 
 /* ------------------------------about-me */
 
-/* .about-me {
-  height: calc(100vh-100px);
-} */
+#sec2 {
+  height: 100vh;
+}
+
+.about-me {
+  position: relative;
+}
 
 .about-me > .inner {
   width: 1680px;
@@ -309,10 +313,23 @@ header nav h1 {
 }
 
 /* -------------------------------------works */
+
+.works {
+  margin-top: 300px;
+}
+
 .works-wrap {
   display: flex;
   justify-content: space-between;
+  /* height: 793px; */
 }
+
+.works-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
 .works-info h2 {
   font-family: "PP Neue Montreal Book", sans-serif;
   font-size: 3rem;
@@ -320,4 +337,154 @@ header nav h1 {
 .works-info h3 {
   font-family: "PP Neue Montreal Thin", sans-serif;
   font-size: 2.625rem;
+}
+
+.meta {
+  display: flex;
+  gap: 180px;
+  margin-top: 358px;
+}
+
+.meta dt {
+  font-family: "PP Neue Montreal Book", sans-serif;
+  font-size: 1.5rem;
+}
+
+.meta dd {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.works-shot {
+  width: 738px;
+  height: 845px;
+}
+
+.works-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------wokrs-banner */
+.works-banner {
+  margin-top: 300px;
+}
+
+.worksss {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title .kicker {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.title .kicker strong {
+  color: #000;
+}
+
+.title h2 {
+  font-family: "PP Neue Montreal Medium", sans-serif;
+  font-size: 3rem;
+}
+
+.title h3 {
+  font-family: "PP Neue Montreal Thin", sans-serif;
+  font-size: 3rem;
+  color: #555;
+}
+
+/* 컨테이너 비율/높이 고정 */
+.mock-col {
+  width: 738px;
+  height: 386px;
+}
+.hero-slider,
+.hero-slider .swiper-wrapper,
+.hero-slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-meta .hero-num {
+  font-weight: 500;
+}
+.hero-meta .hero-cap {
+  font-weight: 500;
+}
+
+.thumbs-slider {
+  margin-top: 134px;
+}
+
+.thumbs-slider .swiper-slide {
+  width: 240px;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbs-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.thumbs-slider .swiper-slide img:hover {
+  transform: scale(1.2);
+}
+
+.thumbs-slider .swiper-wrapper {
+  display: flex;
+  /* justify-content: space-between; */
+  counter-reset: thumb;
+}
+
+.thumbs-slider .swiper-slide::before {
+  counter-increment: thumb;
+  content: "/ " counter(thumb, decimal-leading-zero); /* / 01, / 02 ... */
+  position: absolute;
+  left: 0;
+  top: -20px;
+  font-weight: 600;
+}
+
+.thumb-num {
+  font-weight: 500;
+}
+
+.thumb-frame {
+  overflow: hidden;
 }

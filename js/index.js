@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: "#hero",
+      trigger: "#sec1",
       start: "top top+=100",
       end: "+=300%",
       scrub: true,
@@ -41,4 +41,40 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   window.addEventListener("load", () => ScrollTrigger.refresh());
+
+  // 썸네일 슬라이더 옵션
+  const thumbsSlider = new Swiper(".thumbs-slider", {
+    watchSlidesProgress: true,
+    freeMode: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+  });
+
+  const heroSlider = new Swiper(".hero-slider", {
+    loop: true,
+    autoplay: true,
+    speed: 1000,
+    effect: "slide",
+
+    thumbs: {
+      swiper: thumbsSlider,
+    },
+  });
+
+  const heroNum = document.querySelector(".hero-num");
+  const heroCap = document.querySelector(".hero-cap");
+
+  function updateHeroMeta(swiper) {
+    // loop:true에서도 실제 인덱스는 realIndex
+    const idx = swiper.realIndex; // 0-based
+    const activeSlide = swiper.slides[swiper.activeIndex]; // 복제 포함 중 활성
+    const caption = activeSlide?.getAttribute("data-caption") || "";
+
+    heroNum.textContent = `/ ${String(idx + 1).padStart(2, "0")}`;
+    heroCap.textContent = caption;
+  }
+
+  // 최초 한 번, 그리고 슬라이드 바뀔 때마다 갱신
+  heroSlider.on("init", () => updateHeroMeta(heroSlider));
+  heroSlider.on("slideChange", () => updateHeroMeta(heroSlider));
 });
