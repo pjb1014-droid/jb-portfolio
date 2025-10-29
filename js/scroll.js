@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   snapSections.forEach((selector, index) => {
     ScrollTrigger.create({
       trigger: selector,
-      start: "top 30%",
-      end: "bottom 30%",
+      start: "top 80px",
+      end: "bottom 80px",
       // markers: true,
       onEnter: () => (currentSection = index + 1),
       onEnterBack: () => (currentSection = index + 1),
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const scrollPos = window.scrollY;
       const sec1 = document.querySelector("#sec1");
       const sec1Height = sec1.offsetHeight;
-      const sec1Threshold = sec1Height * 0.7; // sec1의 70% 지점
+      const sec1Threshold = sec1Height * 0.7; // sec1의 80% 지점
 
-      // sec1의 70% 지점에서 아래로 휠 시 sec2로 자동 이동
+      // sec1의 80% 지점에서 아래로 휠 시 sec2로 자동 이동
       if (
         scrollPos >= sec1Threshold &&
         scrollPos < sec1Height &&
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 0.8,
                 scrollTo: {
                   y: "#sec1",
+                  offsetY: 70,
                 },
                 ease: "power2.inOut",
                 onComplete: () => {

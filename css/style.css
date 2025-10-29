@@ -175,7 +175,7 @@ header nav h1 {
 
 .main > section:not(:first-child) {
   height: 100vh;
-  border: 5px solid #000;
+  /* border: 5px solid #000; */
 }
 
 /* ------------------------------about-me */
