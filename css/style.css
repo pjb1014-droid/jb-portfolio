@@ -74,11 +74,9 @@ header nav h1 {
 }
 
 .inner {
-  width: 1800px;
+  max-width: 1800px;
   margin: 0 auto;
-  /* position: absolute;
-  bottom: -30px;
-  left: 60px; */
+  height: 100%;
 }
 
 .home-text {
@@ -178,15 +176,20 @@ header nav h1 {
   color: #000;
 }
 
+.main > section:not(:first-child) {
+  height: 100vh;
+  border: 5px solid #000;
+}
+
 /* ------------------------------about-me */
 #sec2,
 #sec3,
 #sec4 {
-  margin-top: 100px; /* 헤더 높이만큼 띄우기 */
+  padding-top: 100px; /* 헤더 높이만큼 띄우기 */
 }
 
 .about-me > .inner {
-  width: 1680px;
+  max-width: 1680px;
   margin: 0 auto;
 }
 
@@ -405,7 +408,6 @@ header nav h1 {
 .worksss {
   display: flex;
   justify-content: space-between;
-  margin-top: 300px;
 }
 
 .title {

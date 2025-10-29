@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   gsap.set([".layer-intro .intro-text", ".scroll-next"], {
     opacity: 0,
