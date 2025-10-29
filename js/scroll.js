@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1,
         scrollTo: {
           y: targetId,
-          offsetY: 70,
+          // offsetY: 100,
         },
         ease: "power2.inOut",
       });
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 1,
           scrollTo: {
             y: "#sec2",
-            offsetY: 70,
+            // offsetY: 70,
           },
           ease: "power2.inOut",
           onComplete: () => {
