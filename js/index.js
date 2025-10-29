@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   tl.to(
     ".layer-home .home-text",
     {
-      opacity: 0,
+      opacity: 0.1,
+      // scale: 1.1,
       filter: "blur(12px)",
       ease: "none",
       duration: 1, // 타임라인 전체
@@ -33,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     [".layer-intro .intro-text", ".scroll-next"],
     {
       opacity: 1,
+
       filter: "blur(0px)",
+      stagger: 0.3, // 각 문단이 0.3초 간격으로 나타남
       ease: "none",
       duration: 0.4, // 더 빠르게 또렷하게
     },

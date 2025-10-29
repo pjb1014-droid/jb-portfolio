@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+  scroll-padding-top: 100px; /* 헤더의 높이만큼 패딩을 추가 */
+}
+
 /* 헤더 */
 header {
   height: 100px;
@@ -40,9 +44,9 @@ header nav h1 {
   border-bottom: 1px solid #000;
 }
 
-#main {
+/* #main {
   padding-top: 100px;
-}
+} */
 
 /* main-home */
 
@@ -175,13 +179,10 @@ header nav h1 {
 }
 
 /* ------------------------------about-me */
-
-#sec2 {
-  height: 100vh;
-}
-
-.about-me {
-  position: relative;
+#sec2,
+#sec3,
+#sec4 {
+  margin-top: 100px; /* 헤더 높이만큼 띄우기 */
 }
 
 .about-me > .inner {
@@ -191,7 +192,9 @@ header nav h1 {
 
 .about-me h2 {
   font-family: "PP Neue Montreal Book", sans-serif;
-  font-size: 90px;
+  font-size: 5.625rem;
+  position: relative;
+  top: 70px;
 }
 
 .about-wrap {
@@ -206,14 +209,17 @@ header nav h1 {
 }
 
 .profile-left h3 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.25rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 .profile-left span {
   font-family: "PP Neue Montreal Thin", sans-serif;
   font-size: 1.125rem;
   color: #555;
+  letter-spacing: 1px;
 }
 
 .profile-left h4 {
@@ -253,7 +259,7 @@ header nav h1 {
 }
 
 .profile-right .education {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .profile-right .education dt {
@@ -269,6 +275,7 @@ header nav h1 {
   gap: 10px;
   font-weight: 400;
   font-size: 1.25rem;
+  width: 727px;
 }
 
 .profile-right .education ul li time {
@@ -279,7 +286,7 @@ header nav h1 {
 }
 
 .profile-right .certificate {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .profile-right .certificate dt {
@@ -296,7 +303,7 @@ header nav h1 {
 }
 
 .profile-right .material {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .profile-right .material dt {
@@ -314,35 +321,31 @@ header nav h1 {
 
 /* -------------------------------------works */
 
-.works {
-  margin-top: 300px;
-}
-
 .works-wrap {
   display: flex;
   justify-content: space-between;
-  /* height: 793px; */
+  position: relative;
+  top: 60px;
 }
 
 .works-info {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
-.works-info h2 {
+.works-info h2 strong {
   font-family: "PP Neue Montreal Book", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
 }
-.works-info h3 {
+.works-info h2 {
   font-family: "PP Neue Montreal Thin", sans-serif;
-  font-size: 2.625rem;
+  font-size: 3.625rem;
 }
 
 .meta {
   display: flex;
   gap: 180px;
-  margin-top: 358px;
 }
 
 .meta dt {
@@ -360,31 +363,56 @@ header nav h1 {
   color: #555;
 }
 
+.custom-cursor {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(198, 50, 16);
+
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  display: none;
+  line-height: 1.3;
+  font-family: "PP Neue Montreal Book", sans-serif;
+}
+
 .works-shot {
-  width: 738px;
-  height: 845px;
+  width: 716px;
+  height: 708px;
+  cursor: none;
 }
 
 .works-shot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.4s;
+}
+
+.works-shot img:hover {
+  filter: brightness(0.8);
 }
 
 /* ----------------------------wokrs-banner */
-.works-banner {
-  margin-top: 300px;
-}
-
 .worksss {
   display: flex;
   justify-content: space-between;
+  margin-top: 300px;
 }
 
 .title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 900px;
 }
 
 .title .kicker {
@@ -443,7 +471,7 @@ header nav h1 {
 }
 
 .thumbs-slider {
-  margin-top: 134px;
+  margin: 100px 0 30px;
 }
 
 .thumbs-slider .swiper-slide {
@@ -472,14 +500,14 @@ header nav h1 {
   counter-reset: thumb;
 }
 
-.thumbs-slider .swiper-slide::before {
+/* .thumbs-slider .swiper-slide::before {
   counter-increment: thumb;
-  content: "/ " counter(thumb, decimal-leading-zero); /* / 01, / 02 ... */
+  content: "/ " counter(thumb, decimal-leading-zero);
   position: absolute;
   left: 0;
   top: -20px;
   font-weight: 600;
-}
+} */
 
 .thumb-num {
   font-weight: 500;
