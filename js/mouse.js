@@ -18,4 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
   worksShot.addEventListener("mouseleave", () => {
     cursor.style.display = "none";
   });
+
+  // 커서 도트 애니메이션
+  const cursorDot = document.querySelector(".cursor-dot");
+
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(cursorDot, {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.9,
+      ease: "power2.out",
+    });
+  });
+
+  // works-shot 영역 진입/이탈 시 커서 도트 제어
+  worksShot.addEventListener("mouseenter", () => {
+    gsap.to(cursorDot, {
+      opacity: 0,
+      scale: 0,
+      duration: 0.2,
+    });
+  });
+
+  worksShot.addEventListener("mouseleave", () => {
+    gsap.to(cursorDot, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.2,
+    });
+  });
 });

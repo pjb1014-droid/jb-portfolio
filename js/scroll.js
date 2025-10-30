@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // sec2~sec5 스냅 효과
-  const snapSections = ["#sec2", "#sec3", "#sec4"];
+  const snapSections = ["#sec2", "#sec3", "#sec4", "#sec5"];
   let isSnapping = false;
   let currentSection = 0;
 
   snapSections.forEach((selector, index) => {
     ScrollTrigger.create({
       trigger: selector,
-      start: "top 80px",
-      end: "bottom 80px",
+      // start: "top 80px",
+      // end: "bottom 80px",
       // markers: true,
       onEnter: () => (currentSection = index + 1),
       onEnterBack: () => (currentSection = index + 1),
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const scrollPos = window.scrollY;
       const sec1 = document.querySelector("#sec1");
       const sec1Height = sec1.offsetHeight;
-      const sec1Threshold = sec1Height * 0.7; // sec1의 80% 지점
+      const sec1Threshold = sec1Height * 0.98; // sec1의 80% 지점
 
-      // sec1의 80% 지점에서 아래로 휠 시 sec2로 자동 이동
+      // sec1의 0% 지점에서 아래로 휠 시 sec2로 자동 이동
       if (
         scrollPos >= sec1Threshold &&
         scrollPos < sec1Height &&
@@ -104,18 +104,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 0.8,
                 scrollTo: {
                   y: "#sec1",
-                  offsetY: 70,
+                  // offsetY: 70,
                 },
                 ease: "power2.inOut",
                 onComplete: () => {
                   setTimeout(() => {
                     isSnapping = false;
-                  }, 300);
+                  });
                 },
               });
             }
           }
-        }, 50);
+        }, 0);
       }
     },
     { passive: true }
