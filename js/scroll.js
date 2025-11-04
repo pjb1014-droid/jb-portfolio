@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelector("header h1 a").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   // sec2~sec5 스냅 효과
   const snapSections = ["#sec2", "#sec3", "#sec4", "#sec5"];
   let isSnapping = false;
